@@ -20,7 +20,7 @@ Required Python modules:
 
 You can install dependencies using:
   - pip install requests ipwhois
--AND Compile it using pyinstaller as binary:
+-AND you may want to re-compile it back using pyinstaller as binary with your API:
   - pyinstaller.exe --onefile "pywho.py"
 
 API Keys Setup (You may embed your API Keys for more insight about the target for your Reconnaissance Ops)
