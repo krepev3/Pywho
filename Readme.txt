@@ -1,8 +1,9 @@
-OSINT IP Lookup Tool - Pre and Post-Compiled)
+OSINT IP Lookup Tool - (Pre and Post-Compiled)
 
 Description
 - This tool gathers intelligence on an IP address using multiple sources, including WHOIS, GeoIP, Shodan, and AbuseIPDB. It provides details like ASN, location, ISP, open ports, and abuse reports.
 - Good tools for Network Security tools in enumerating the communicaiton between dmoain and internet.
+- In case of Zone Makeup in Firewall, Integrating SpiderFoot API may give you more insight about the ASN and its Malicious Subnet/IP Neighbour to be watch)
 
 Features
 WHOIS lookup for ASN and subnet details.
