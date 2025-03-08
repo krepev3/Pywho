@@ -1,4 +1,4 @@
-# PyWho v1.00 - OSINT IP Lookup Tool
+# OSINT IP Lookup Tool v1.00
 
 ## Description
 PyWho is an **Open-Source Intelligence (OSINT) IP Lookup Tool** that gathers intelligence on an IP address using multiple sources, including **WHOIS, GeoIP, Shodan, and AbuseIPDB**. It provides details such as:
