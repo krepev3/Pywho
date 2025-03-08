@@ -1,48 +1,34 @@
-OSINT IP Lookup Tool - (Pre and Post-Compiled)
+Pywho - OSINT IP Lookup Tool - (Pre and Post-Compiled)
 
 Description
 - This tool gathers intelligence on an IP address using multiple sources, including WHOIS, GeoIP, Shodan, and AbuseIPDB. It provides details like ASN, location, ISP, open ports, and abuse reports.
 - Good tools for Network Security tools in enumerating the communicaiton between dmoain and internet.
 - In case of Zone Makeup in Firewall, Integrating SpiderFoot API may give you more insight about the ASN and its Malicious Subnet/IP Neighbour to be watch)
 
-Features
-WHOIS lookup for ASN and subnet details.
-GeoIP lookup to determine country, region, and ISP.
-Shodan scan for open ports and associated services.
-AbuseIPDB check for malicious activity reports.
+1. OSINT (Open-Source Intelligence) Investigations
+  Threat Intelligence Analysts: To gather information on suspicious IPs.
+  SOC Analysts: To check malicious IPs targeting an organization.
+  Penetration Testers: To perform passive reconnaissance on a target.
 
-Requirements:
-Python 3.x
+2. Incident Response & Threat Hunting
+  Incident Responders: To check if an IP involved in an attack has been flagged as malicious.
+  Threat Hunters: To identify attacker infrastructure using OSINT sources.
 
-Required Python modules:
-  - requests
-  - ipwhois
+3. Red Team & Ethical Hackers
+  Red Team Operators: To perform reconnaissance on a target before an engagement.
+  Bug Bounty Hunters: To gather intelligence about a target's network footprint.
 
-You can install dependencies using:
-  - pip install requests ipwhois
--AND you may want to re-compile it back using pyinstaller as binary with your API:
-  - pyinstaller.exe --onefile "pywho.py"
+4. Blue Team & Defensive Security
+  Blue Teamers: To analyze potential threats and block malicious IPs.
+  Security Engineers: To enrich firewall rules with intelligence from AbuseIPDB & Shodan.
 
-API Keys Setup (You may embed your API Keys for more insight about the target for your Reconnaissance Ops)
-This tool requires API keys for Shodan and AbuseIPDB. Set them as environment variables before running the script:
-  (Or you may design any API Key Platform to be use)
+5. IT & Network Security Professionals
+  Sysadmins & Network Engineers: To investigate unusual traffic sources.
 
-  - SHODAN_API_KEY = ""  # Replace with your Shodan API key
-  - ABUSEIPDB_API_KEY = "" # Replace with your AbuseIPDB API key
+Potential Use Cases:
+✅ Identifying malicious IPs using AbuseIPDB
+✅ Gathering ISP & ASN details with WHOIS & GeoIP
+✅ Finding open ports & services with Shodan & Nmap
+✅ Investigating attacker infrastructure
 
-Usage:
-Run the script with an IP address as an argument:
-  - pywho.exe <IP_ADDRESS>
-
-Output
-The tool will display:
-  - WHOIS information (ASN, subnet, country)
-  - GeoIP details (location, ISP)
-  - Open ports from Shodan
-  - Abuse reports from AbuseIPDB
-(Suggest to integrate SpiderFoot and VT API for more insight)
-
-Disclaimer
-This tool is for educational and research purposes only. Use it responsibly and ensure compliance with local laws and regulations.
-__________________________________________________________________________________________________________________________________
-Author : Berzerker
+May chech the Readme.txt on each version updated.
