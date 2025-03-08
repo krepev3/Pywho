@@ -15,8 +15,8 @@ This tool is useful for cybersecurity professionals, SOC analysts, incident resp
 ✅ **GeoIP Lookup** – Fetches ISP, country, region, city, and organization.
 ✅ **Shodan Lookup** – Checks open ports, services, hostnames, and ISP information.
 ✅ **AbuseIPDB Lookup** – Identifies reported malicious activities associated with the IP.
-✅ **Nmap Scan (Optional)** – Performs service and version detection.
-✅ **Save Output (-o [Output])** – Save results to a file for documentation.
+✅ (NEW)**Nmap Scan (Optional)** – Performs service and version detection.
+✅ (NEW)**Save Output (-o [Output])** – Save results to a file for documentation.
 ✅ **Cross-Platform Compatibility** – Runs on Windows, Linux, and macOS.
 ✅ **Lightweight and Fast** – No heavy dependencies.
 
