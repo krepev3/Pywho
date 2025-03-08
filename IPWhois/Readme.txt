@@ -9,7 +9,7 @@ PyWho is an **Open-Source Intelligence (OSINT) IP Lookup Tool** that gathers int
 
 This tool is useful for cybersecurity professionals, SOC analysts, incident responders, penetration testers, and network engineers.
 
-## Features
+## Based Features
 ✅ **WHOIS Lookup** – Retrieves ASN, subnet, country, and organization details.
 ✅ **GeoIP Lookup** – Fetches ISP, country, region, city, and organization.
 ✅ **Shodan Lookup** – Checks open ports, services, hostnames, and ISP information.
