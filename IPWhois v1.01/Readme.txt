@@ -10,7 +10,7 @@ OSINT IP Lookup Tool is an **Open-Source Intelligence (OSINT) IP Lookup Tool** t
 
 This tool is useful for cybersecurity professionals, SOC analysts, incident responders, penetration testers, and network engineers.
 
-## Features
+## Features include NEW Option.
 ✅ **WHOIS Lookup** – Retrieves ASN, subnet, country, and organization details.
 ✅ **GeoIP Lookup** – Fetches ISP, country, region, city, and organization.
 ✅ **Shodan Lookup** – Checks open ports, services, hostnames, and ISP information.
