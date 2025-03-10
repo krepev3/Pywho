@@ -25,6 +25,8 @@ import socket
 import argparse
 import requests
 import subprocess
+import os
+import re
 from ipwhois import IPWhois
 from concurrent.futures import ThreadPoolExecutor
 
@@ -32,12 +34,21 @@ from concurrent.futures import ThreadPoolExecutor
 SHODAN_API_KEY = ""
 ABUSEIPDB_API_KEY = ""
 
+# Safe directory for storing output files
+OUTPUT_DIR = "outputs"
+os.makedirs(OUTPUT_DIR, exist_ok=True)  # Ensure the directory exists
+
 def display_banner():
     return "\nOSINT - IP Lookup [Version 1.01]\n(c) Lyxt. All rights reserved.\n"
 
 def verbose_print(verbose, message):
     if verbose:
         print(f"[INFO] {message}")
+
+def sanitize_filename(filename):
+    """Sanitize filename to prevent Path Traversal (CWE-23)"""
+    filename = re.sub(r"[^\w\-.]", "_", filename)  # Allow only safe characters
+    return os.path.basename(filename)  # Prevent directory traversal
 
 def whois_lookup(ip_address, verbose):
     try:
@@ -150,14 +161,19 @@ def main():
     # Print results
     print(results)
 
-    # Save to file if -o is provided
+    # Save to file if -o is provided (SAFE FILE HANDLING)
     if args.output:
-        try:
-            with open(args.output, "w", encoding="utf-8") as f:
-                f.write(results)
-            print(f"[INFO] Results saved to {args.output}")
-        except Exception as e:
-            print(f"[ERROR] Failed to save results: {e}")
+        safe_filename = sanitize_filename(args.output)
+        safe_path = os.path.join(OUTPUT_DIR, safe_filename)
+        if os.path.exists(safe_path):
+            print(f"[ERROR] File '{safe_filename}' already exists. Choose a different name.")
+        else:
+            try:
+                with open(safe_path, "w", encoding="utf-8") as f:
+                    f.write(results)
+                print(f"[INFO] Results saved to {safe_path}")
+            except Exception as e:
+                print(f"[ERROR] Failed to save results: {e}")
 
 if __name__ == "__main__":
     main()
