@@ -148,6 +148,3 @@ if __name__ == "__main__":
 
     if args.output:
         save_output(results, args.output)
-
-    if args.output:
-        save_output(results, args.output)
