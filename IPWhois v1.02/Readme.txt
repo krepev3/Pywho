@@ -22,14 +22,20 @@ This tool is useful for cybersecurity professionals, SOC analysts, incident resp
 ✅ **Removed NMAP request via Y/N, implement automatically scan for 100 port , straightforward.
 ✅ **(NEW) - Added Multi-Threading when running all option concurrently.
 
+Security Fix (CWE-23 : Path Traversal Vulnerability)
+
+def sanitize_filename(filename):
+    """Sanitize filename to prevent Path Traversal (CWE-23)"""
+    filename = re.sub(r"[^\w\-.]", "_", filename)  # Allow only safe characters
+    return os.path.basename(filename)  # Prevent directory traversal
+
 ## Installation
 ### Prerequisites
 Ensure you have **Python 3.x** and the latest version of **Nmap** installed on your system.
 
 ### Install Required Packages
-```bash
-pip install requests ipwhois
-```
+  - pip install requests ipwhois
+
 
 ## Usage
 pywho -h
