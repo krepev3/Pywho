@@ -14,16 +14,10 @@ This tool is useful for cybersecurity professionals, SOC analysts, incident resp
 ✅ **(NEW) - Reverse DNS Resolver for target information accuracy.
 ✅ **(NEW) - Python recently remove cgi within Request, unfortunately you may want to use HTTPX Header, but i recommend to use Python v3.12. You may face some issue according to the Header.
 
-Security Fix (CWE-23 : Path Traversal Vulnerability)
-
-def sanitize_filename(filename):
-    """Sanitize filename to prevent Path Traversal (CWE-23)"""
-    filename = re.sub(r"[^\w\-.]", "_", filename)  # Allow only safe characters
-    return os.path.basename(filename)  # Prevent directory traversal
-
 ## Installation
 ### Prerequisites
-Ensure you have **Python 3.x** and the latest version of **Nmap** installed on your system.
+Ensure you have **Python 3.12** and the latest version of **Nmap** installed on your system.
+Python 3.13 may occur the outdated cgi which request you to use HTTPX (Im still in debugging)
 
 ### Install Required Packages
   - pip install requests ipwhois
