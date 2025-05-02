@@ -1,4 +1,4 @@
-# OSINT - IP Lookup [Version 1.02]
+# OSINT - IP Lookup [Version 1.03]
 
 This Python script performs a series of OSINT lookups on an IP address or domain. It queries various services such as WHOIS, GeoIP, Shodan, AbuseIPDB, and runs Nmap scans to provide detailed security information. The script also allows you to save the results to a file and provides verbose output for debugging purposes.
 
