@@ -14,5 +14,12 @@ This Python script performs a series of OSINT lookups on an IP address or domain
 ## Requirements:
 - **Python 3.x**: Ensure you have Python 3.x installed on your system.
 - **Dependencies**: Install the required libraries:
-  ```bash
+
+## Dependencies
   pip install requests ipwhois
+
+## License
+
+This project is open-source and released under the [MIT License](https://mit-license.org/).
+
+- Author : Lyxt
